@@ -20,6 +20,8 @@ When instructions conflict, resolve in this order (highest wins):
 | ----------------------------| -----------------------------| ----------------|
 | All visual / UI / frontend | [skills/frontend-design.md](skills/frontend-design.md) | always         |
 | All server / API / data    | [skills/backend.md](skills/backend.md)                 | always         |
+| Project state / onboarding | [code_of_conduct.md](code_of_conduct.md)               | always         |
+| Audits (security/SEO/etc)  | [security.md](security.md)                             | when auditing  |
 (Additional domains appended here as the collection grows)
 
 ### The prime rule
@@ -43,6 +45,12 @@ When instructions conflict, resolve in this order (highest wins):
 - **Secrets**: never commit, log, or echo API keys, tokens, or credentials.
 - **Scope**: do what is asked, no more. Do not refactor or restructure outside
   the task without asking.
+- **State**: before every git commit, update [code_of_conduct.md](code_of_conduct.md)
+  with what changed and any decisions made (short, newest on top). The next
+  session resumes from that file, so it must be current.
+- **Audits**: when an audit is requested, follow [security.md](security.md),
+  then record the outcome in its state section so the next audit resumes where
+  this one stopped.
 - **Conventions**: match the existing code style, libraries, and patterns.
   Never assume a library is available. Check first.
 
